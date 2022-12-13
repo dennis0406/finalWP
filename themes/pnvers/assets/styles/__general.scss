@@ -1,0 +1,156 @@
+// @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body, * {
+    font-family: var(--font-text);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--cl-text-primary);
+    font-size: calc(13px + 0.5vw);
+}
+
+.container {
+    width: var(--w-container);
+    padding: 0 var(--px-container);
+    margin: 0 auto;
+    transition: all 1s ease;
+}
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed !important;
+    }
+}
+
+.dark-mode {
+    transition: background .5s ease;
+    background-color: var(--bg-secondary) !important;
+    color: var(--cl-text-secondary) !important;
+    animation: 1s ease-out 0s 1 switch-dark;
+}
+
+@keyframes switch-dark {
+    0% {
+        background-color: var(--bg-primary) ;
+    }
+    100% {
+        background-color: var(--bg-secondary) ;
+    }
+}
+
+.btn {
+    color: var(--cl-text-secondary) !important;
+    background-color: var(--bg-secondary) !important;
+    padding: var(--p-btn);
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.button{
+    color: var(--cl-text-secondary) !important;
+    background-color: var(--bg-secondary) !important;
+    padding: var(--p-btn);
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+.title__section {
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: var(--m-t-title);
+    text-transform: uppercase;
+    font-size: calc(15px + 1.35vw);
+    font-family: var(--font-title);
+}
+
+.title__section::before {
+    display: inline-block;
+    content: "";
+    background-color: currentColor;
+    width: var(--w-title-section);
+    height: 1px;
+    margin-right: 2px;
+    align-items: center;
+}
+
+.title__section::after {
+    display: inline-block;
+    content: "";
+    background-color: currentColor;
+    width: var(--w-title-section);
+    height: 1px;
+    margin-left: 2px;
+    align-items: center;
+}
+
+.view-all{
+    float: right;
+    color: inherit;
+}
+
+.price{
+    font-weight: 600;
+    color: red;
+}
+.price::before{
+    content: "\24";
+    font-weight: 600;
+}
+
+.active::before{
+    transform: scaleX(1) !important;
+}
+
+.not_single{
+    padding-bottom: 20px;
+    padding-top: 10px;
+    border-bottom: 1px solid currentColor;
+    border-bottom-style:dotted ;
+}
+
+.animate_underline{
+    color: inherit;
+    @include animate_underline;
+    &::before {
+        @include animate_underline_before(currentColor);
+    }
+    &:hover::before {
+        @include animate_underline_hover_before;
+    }
+}
+
+input[type=text], input[type=tel], input[type=email], input[type=password], textarea{
+    border: 1px solid var(--cl-border);
+    background-color: inherit;
+    color: currentColor;
+    border-radius: 4px;
+    padding-left: 10px;
+
+}
+
+input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, input[type=password]:focus, textarea:focus{
+    border-color: var(--cl-pink) ;
+}
+
+
+.underline{
+    text-decoration: underline;
+    color: inherit;
+}
+
+a{
+    color: inherit;
+}
+
+.switch__dark-mode--button{
+    background-color: var(--bg-primary) !important;
+    color: var(--cl-text-primary) !important;
+}

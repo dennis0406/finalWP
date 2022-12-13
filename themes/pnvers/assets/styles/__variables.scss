@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Burned&display=swap'); // font for logo
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Ubuntu+Mono&display=swap'); //Font for title 
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap'); //Font for text
+
+:root{
+  --font-text: 'JetBrains Mono', monospace;
+  --font-title: 'Rubik Mono One', sans-serif;
+  --bg-primary: #e8e8e8;
+  --cl-border: #d3ced2;
+  --bg-secondary: #222;
+  --cl-pink: #ff0084;
+  --cl-text-primary: #000000;
+  --cl-text-secondary: #e6e6e6;
+  --w-container: 95%;
+  --px-container: 0;
+  --p-btn: 5px 8px;
+  --m-t-title: 10px;
+  --w-title-section: 20px;
+  @include respond(tab-land){
+    --p-btn: 8px 10px;
+    --m-t-title: 20px;
+    --w-title-section: 30px;
+  }
+  @include respond(desktop){
+    --w-container: 95%;
+    --p-btn: 8px 14px;
+    --m-t-title: 25px;
+    --w-title-section: 50px;
+  }
+  // Header
+  --ff-logo: 'Rubik Burned', cursive;
+  --pt-header: 20px;
+  --dp-menu: none;
+  --ps-logo: relative;
+  --left-logo: 0;
+  --trlY-logo: 0;
+  --vsb-icon-left: visible;
+  --ps-menu: fixed;
+  --fl-dr-menu: column;
+  --w-menu: 100%;
+  --h-menu: 100%;
+  --pt-menu: 100px;
+  --bg-menu: rgba(0, 0, 0, 0.563);
+  --bg-ulmenu: #e8e8e8;
+  --w-ulmenu: fit-content;
+  --dp-icon-bag: none;
+  --trl-ulmenu: -100%;
+  --w-ul: 50vw;
+  --ps-ul: absolute;
+  @include respond(desktop){
+    --dp-menu: block;
+    --ps-logo: absolute;
+    --pt-header: 40px;
+    --left-logo: 50%;
+    --trlY-logo: -50%;
+    --vsb-icon-left: hidden;
+    --ps-menu: relative;
+    --fl-dr-menu: row;
+    --w-menu: auto;
+    --h-menu: auto;
+    --pt-menu: 0;
+    --bg-menu: transparent;
+    --bg-ulmenu: transparent;
+    --w-ulmenu: 60vw;
+    --dp-icon-bag: block;
+    --trl-ulmenu: 0;
+    --w-ul: 100%;
+    --ps-ul: relative;
+  };
+  
+  //Banner what you know about rolling down in the deep when your brain goes numb, you can call that mental freeze when these people talktoo= 
+  
+  --line-height-banner: 0.8;
+  --size-dot-banner: 8px;
+  @include respond(tab-land){
+    --size-dot-banner: 10px;
+    --line-height-banner: 1;
+  }
+  @include respond(desktop){
+    --line-height-banner: 1.3;
+    --size-dot-banner: 15px;
+  }
+
+
+  // newest Post
+  --flex-d-post: column;
+  --m-t-post: 20px;
+  --opct-img-post: .9;
+  --p-content-post: 0 15px;
+  --h-item-post: 45vw;
+  --p-meta-post: 10px;
+  --fz-title-post: calc(15px + 1.3vw);
+  --fz-meta-post: 10px;
+  --cl-content-post: #e6e6e6;
+  --bg-item-post: #e6e6e63e;
+  @include respond(tab-land){
+    --flex-d-post: row;
+    --m-t-post: 30px;
+    --p-content-post: 0 25px;
+    --h-item-post: 30vw;
+    --p-meta-post: 10px;
+    --fz-title-post: calc(13px + 1.3vw);
+    --fz-meta-post: 10px;
+    --opct-img-post: 0;
+    --cl-content-post: inherit;
+  }
+  @include respond(desktop){
+    --flex-d-post: row;
+    --m-t-post: 40px;
+    --p-content-post: 0 35px;
+    --h-item-post: 25vw;
+    --p-meta-post: 15px;
+    --fz-title-post: calc(13px + 1.3vw);
+    --fz-meta-post: 15px;
+    --opct-img-post: 0;
+    --cl-content-post: inherit;
+  }
+
+  // product - sidebar
+  --fd-container-main-sidebar: column;
+  --w-prd-container: 100%;
+  --w-sidebar-container: 100%;
+  --fd-prd-item: column;
+  --gap-prd-item: 22px;
+  --w-prd-image: 100%;
+  --bg-gray: #454558;
+  --h-prd-item: 370px;
+  --h-prd-image: 50%;
+
+  --fz-titile-sidebar: calc(15px + 1.35vw);
+  --w-title-sidebar: 20px;
+  --fd-sidebar-list: column;
+  --w-taxonomy-sidebar: 100%;
+  --w-post-recmm-sidebar: 100%;
+
+  @include respond(tab-land){
+    --fd-container-main-sidebar: column;
+    --w-prd-container: 100%;
+    --w-sidebar-container: 100%;
+    --fd-prd-item: row;
+    --gap-prd-item: 35px;
+    --w-prd-image: 50%;
+    --h-prd-item: 195px;
+    --h-prd-image: auto;
+
+    --fz-titile-sidebar: calc(15px + 1.35vw);
+    --w-title-sidebar: 30px;
+    --fd-sidebar-list: row;
+    --w-taxonomy-sidebar: 80%;
+    --w-post-recmm-sidebar: 80%;
+  }
+  @include respond(desktop){
+    --fd-container-main-sidebar: row;
+    --w-prd-container: 74%;
+    --w-sidebar-container: 26%;
+    --fd-prd-item: row;
+    --gap-prd-item: 48px;
+    --w-prd-image: 50%;
+    --h-prd-item: 240px;
+    --h-prd-image: auto;
+
+    --fz-titile-sidebar: calc(9px + 1.35vw);
+    --w-title-sidebar: 20px;
+    --fd-sidebar-list: column;
+    --w-taxonomy-sidebar: 90%;
+    --w-post-recmm-sidebar: 100%;
+  }
+
+  // Footer
+  --mt-footer: 15px;
+  --gtemp-footer: 1fr;
+  --fd-middle--footer: column;
+  --fd-list-middle-footer: row;
+  --justct-right-footer: center;
+  --align-middle-footer: center;
+  --just-content-right-footer: center;
+
+  @include respond(tab-land){
+    --mt-footer: 35px;
+    --gtemp-footer: 30% 40% 30%;
+    --fd-middle--footer: column;
+    --fd-list-middle-footer: column;
+    --justct-right-footer: space-between;
+    --align-middle-footer: center;
+    --just-content-right-footer: flex-end;
+  }
+  @include respond(desktop){
+    --mt-footer: 55px;
+    --gtemp-footer: 30% 40% 30%;
+    --fd-middle--footer: row;
+    --fd-list-middle-footer: column;
+    --justct-right-footer: space-between;
+    --align-middle-footer: flex-start;
+    --just-content-right-footer: flex-end;
+  }
+
+
+  // My account page
+  --grid-temp-cl-my-account-page: 1fr;
+  --flex-direc-my-account-page: row;
+  --fz-icon-nav-my-account: calc(20px + 0.5vw);
+  --display-text-nav-my-account: block;
+  --display-icon-nav-my-account: none;
+  --p-nav-item-my-account: 10px 15px 10px 0;
+  --border-right-nav-my-account: none;
+  
+  @include respond(tab-land){
+    --grid-temp-cl-my-account-page: 8% 90%;
+    --flex-direc-my-account-page: column;
+    --fz-icon-nav-my-account: calc(30px + 0.5vw);
+    --display-text-nav-my-account: none;
+    --display-icon-nav-my-account: block;
+    --p-nav-item-my-account: 10px 0 10px 0;
+    --border-right-nav-my-account: 1px solid var(--cl-border);
+    
+  }
+  @include respond(desktop){
+    --grid-temp-cl-my-account-page: 18% 80%;
+    --flex-direc-my-account-page: column;
+    --fz-icon-nav-my-account: calc(20px + 0.5vw);
+    --display-text-nav-my-account: block;
+    --display-icon-nav-my-account: block;
+    --p-nav-item-my-account: 10px 0 10px 20px;
+    --border-right-nav-my-account: 1px solid var(--cl-border);
+    
+  }
+}
